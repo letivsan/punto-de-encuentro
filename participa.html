@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Formulario de participación en los talleres de Punto de Encuentro."
+    />
+    <title>Participa | Punto de Encuentro</title>
+    <link rel="stylesheet" href="css/estilos.css" />
+  </head>
+
+  <body>
+    <header id="inicio">
+      <a href="index.html">Punto de Encuentro</a>
+
+      <nav aria-label="Navegación principal">
+        <ul>
+          <li>
+            <a href="index.html">Inicio</a>
+          </li>
+          <li>
+            <a href="talleres.html">Talleres</a>
+          </li>
+          <li>
+            <a href="participa.html" aria-current="page">Participa</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Participa en los talleres</h1>
+      <p>
+        Indica qué taller te interesa.
+        <span class="nota">
+          Este formulario es una demostración. Utiliza datos ficticios.
+        </span>
+      </p>
+
+      <form action="gracias.html" method="get">
+        <fieldset>
+          <legend>Datos de contacto</legend>
+
+          <div class="campo">
+            <label for="nombre">Nombre (obligatorio)</label>
+            <input type="text" id="nombre" name="nombre" required />
+          </div>
+
+          <div class="campo">
+            <label for="correo">Correo electrónico (obligatorio)</label>
+            <input type="email" id="correo" name="correo" required />
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Preferencias</legend>
+
+          <div class="campo">
+            <label for="taller">Taller (obligatorio)</label>
+            <select id="taller" name="taller" required>
+              <option value="">Selecciona un taller</option>
+              <option value="orientacion">Orientación a la realidad</option>
+              <option value="estimulacion">Estimulación cognitiva</option>
+              <option value="medio-ambiente">Medio ambiente</option>
+            </select>
+          </div>
+
+          <div class="campo">
+            <label for="comentarios">
+              ¿Qué actividad te interesa especialmente? (opcional)
+            </label>
+            <textarea id="comentarios" name="comentarios" rows="4"></textarea>
+          </div>
+        </fieldset>
+
+        <div class="campo">
+          <input
+            type="checkbox"
+            id="demostracion"
+            name="demostracion"
+            value="si"
+            required
+          />
+          <label for="demostracion">
+            Entiendo que este formulario es una demostración.
+          </label>
+        </div>
+
+        <button type="submit">Enviar</button>
+        <button type="reset">Borrar datos</button>
+      </form>
+    </main>
+
+    <footer>
+      <p>Punto de Encuentro</p>
+      <p>
+        © 2026 Punto de Encuentro. Proyecto académico para la tarea de la UD2 de
+        LMSXI.
+      </p>
+      <a href="#inicio">Volver arriba</a>
+    </footer>
+  </body>
+</html>
