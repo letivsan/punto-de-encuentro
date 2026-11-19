@@ -180,3 +180,18 @@ textarea {
   color: var(--color-gd);
   font-weight: bold;
 }
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.imagen-presentacion {
+  width: 100%;
+  max-width: 600px;
+}
+
+.talleres img {
+  width: 64px;
+}
