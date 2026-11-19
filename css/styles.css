@@ -1,0 +1,182 @@
+:root {
+  --color-g: #97BF0E;
+  --color-gd: #365314;
+  --color-grey: #30352D;
+  --color-w: #FFFFFF;
+
+  --font-text: Arial, sans-serif;
+  --font-S: 1rem;
+  --font-M: 1.5rem;
+  --font-L: 2rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-w);
+  color: var(--color-grey);
+  font-family: var(--font-text);
+  font-size: var(--font-S);
+  line-height: 1.5;
+}
+
+header, main, footer {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+header {
+  border-bottom: 3px solid var(--color-g);
+}
+
+footer {
+  border-top: 1px solid var(--color-grey);
+}
+
+h1 {
+  font-size: var(--font-L);
+}
+
+h2 {
+  font-size: var(--font-M);
+}
+
+h3 {
+  font-size: var(--font-S);
+}
+
+h1, h2, h3, p, .seccion,
+fieldset, .campo, .lista, .aceptacion {
+  margin-bottom: 1rem;
+}
+
+a {
+  color: var(--color-gd);
+}
+
+.marca, .menu-enlace, .boton {
+  text-decoration: none;
+}
+
+.marca {
+  display: inline-block;
+  margin-bottom: 1rem;
+  font-size: var(--font-M);
+  font-weight: bold;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+}
+
+.menu-enlace {
+  display: block;
+  padding: 0.5rem;
+}
+
+.actual {
+  background-color: var(--color-g);
+  color: var(--color-grey);
+}
+
+.bloque {
+  padding: 1rem;
+  border: 1px solid var(--color-grey);
+  background-color: var(--color-w);
+}
+
+.contenido-principal, .tarjetas {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.lista {
+  padding-left: 1.5rem;
+}
+
+.control, .boton {
+  font: inherit;
+}
+
+.boton {
+  display: inline-block;
+  padding: 0.65rem 1rem;
+  border: 1px solid var(--color-gd);
+  background-color: var(--color-gd);
+  color: var(--color-w);
+  cursor: pointer;
+}
+
+.boton:hover {
+  background-color: var(--color-g);
+  color: var(--color-grey);
+}
+
+.tabla-scroll {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--color-w);
+}
+
+caption {
+  padding-bottom: 0.5rem;
+  text-align: left;
+}
+
+th, td {
+  padding: 0.5rem;
+  border: 1px solid var(--color-grey);
+  text-align: left;
+}
+
+thead {
+  background-color: var(--color-gd);
+  color: var(--color-w);
+}
+
+form {
+  max-width: 650px;
+}
+
+legend {
+  font-weight: bold;
+}
+
+.etiqueta {
+  display: block;
+  margin-bottom: 0.35rem;
+}
+
+.control {
+  width: 100%;
+  padding: 0.65rem;
+  border: 1px solid var(--color-grey);
+}
+
+textarea {
+  resize: vertical;
+}
+
+.aceptacion {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.nota {
+  color: var(--color-gd);
+  font-weight: bold;
+}

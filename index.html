@@ -5,42 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Punto de Encuentro: talleres de orientación a la realidad,
-      estimulación cognitiva y medio ambiente para personas adultas
-      con enfermedad mental grave."
+      content="Talleres de orientación a la realidad, estimulación cognitiva y medio ambiente."
     />
     <title>Inicio | Punto de Encuentro</title>
-    <link rel="stylesheet" href="css/estilos.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <style>
+      /* Borde de la presentación de Inicio. */
+      .hero {
+        border-top: 4px solid var(--color-g);
+      }
+    </style>
   </head>
 
   <body>
     <header id="inicio">
-      <a href="index.html">Punto de Encuentro</a>
+      <a class="marca" href="index.html">Punto de Encuentro</a>
 
       <nav aria-label="Navegación principal">
-        <ul>
+        <ul class="menu">
           <li>
-            <a href="index.html" aria-current="page">Inicio</a>
+            <a class="menu-enlace actual" href="index.html" aria-current="page"
+              >Inicio</a
+            >
           </li>
           <li>
-            <a href="talleres.html">Talleres</a>
+            <a class="menu-enlace" href="talleres.html">Talleres</a>
           </li>
           <li>
-            <a href="participa.html">Participa</a>
+            <a class="menu-enlace" href="participa.html">Participa</a>
           </li>
         </ul>
       </nav>
     </header>
 
     <main>
-      <section class="hero">
+      <section class="bloque hero seccion">
         <h1>Talleres para aprender y compartir</h1>
         <p>
           Actividades para personas adultas con enfermedad mental grave. Un
           espacio para participar, desarrollar habilidades y disfrutar de
           actividades en compañía.
         </p>
-        <a href="talleres.html">Ver talleres</a>
+        <a class="boton" href="talleres.html">Ver talleres</a>
       </section>
 
       <div class="contenido-principal">
@@ -48,7 +55,7 @@
           <h2>Nuestros talleres</h2>
 
           <div class="tarjetas">
-            <article class="tarjeta">
+            <article class="bloque tarjeta">
               <h3>Orientación a la realidad</h3>
               <p>
                 Calendario, noticias y conversaciones sobre el entorno y la vida
@@ -56,7 +63,7 @@
               </p>
             </article>
 
-            <article class="tarjeta">
+            <article class="bloque tarjeta">
               <h3>Estimulación cognitiva</h3>
               <p>
                 Propuestas de lectura, prensa y creatividad para trabajar la
@@ -64,7 +71,7 @@
               </p>
             </article>
 
-            <article class="tarjeta">
+            <article class="bloque tarjeta">
               <h3>Medio ambiente</h3>
               <p>
                 Paseos, baños de bosque y actividad física al aire libre para
@@ -74,15 +81,13 @@
           </div>
         </section>
 
-        <aside class="proximas-actividades">
+        <aside class="bloque proximas-actividades">
           <h2>Próximas actividades</h2>
-
-          <ul>
+          <ul class="lista">
             <li>Prensa y actualidad.</li>
             <li>Taller creativo.</li>
             <li>Paseo por el bosque.</li>
           </ul>
-
           <a href="talleres.html#calendario">Ver calendario</a>
         </aside>
       </div>

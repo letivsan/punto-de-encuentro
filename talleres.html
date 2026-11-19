@@ -8,23 +8,28 @@
       content="Talleres y calendario de actividades de Punto de Encuentro."
     />
     <title>Talleres | Punto de Encuentro</title>
-    <link rel="stylesheet" href="css/estilos.css" />
+    <link rel="stylesheet" href="css/styles.css" />
   </head>
 
   <body>
     <header id="inicio">
-      <a href="index.html">Punto de Encuentro</a>
+      <a class="marca" href="index.html">Punto de Encuentro</a>
 
       <nav aria-label="Navegación principal">
-        <ul>
+        <ul class="menu">
           <li>
-            <a href="index.html">Inicio</a>
+            <a class="menu-enlace" href="index.html">Inicio</a>
           </li>
           <li>
-            <a href="talleres.html" aria-current="page">Talleres</a>
+            <a
+              class="menu-enlace actual"
+              href="talleres.html"
+              aria-current="page"
+              >Talleres</a
+            >
           </li>
           <li>
-            <a href="participa.html">Participa</a>
+            <a class="menu-enlace" href="participa.html">Participa</a>
           </li>
         </ul>
       </nav>
@@ -37,47 +42,49 @@
         cognitiva y medio ambiente.
       </p>
 
-      <section id="calendario">
+      <section class="seccion" id="calendario">
         <h2>Calendario semanal</h2>
 
-        <table>
-          <caption>
-            Actividades y horarios de ejemplo
-          </caption>
-          <thead>
-            <tr>
-              <th scope="col">Día</th>
-              <th scope="col">Taller</th>
-              <th scope="col">Actividad</th>
-              <th scope="col">Horario</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">Lunes</th>
-              <td>Orientación a la realidad</td>
-              <td>Prensa y actualidad</td>
-              <td>10:00 a 11:00</td>
-            </tr>
-            <tr>
-              <th scope="row">Miércoles</th>
-              <td>Estimulación cognitiva</td>
-              <td>Taller creativo</td>
-              <td>10:00 a 11:00</td>
-            </tr>
-            <tr>
-              <th scope="row">Viernes</th>
-              <td>Medio ambiente</td>
-              <td>Paseo por el bosque</td>
-              <td>10:00 a 11:30</td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="tabla-scroll">
+          <table>
+            <caption>
+              Actividades y horarios de ejemplo
+            </caption>
+            <thead>
+              <tr>
+                <th scope="col">Día</th>
+                <th scope="col">Taller</th>
+                <th scope="col">Actividad</th>
+                <th scope="col">Horario</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Lunes</th>
+                <td>Orientación a la realidad</td>
+                <td>Prensa y actualidad</td>
+                <td>10:00 a 11:00</td>
+              </tr>
+              <tr>
+                <th scope="row">Miércoles</th>
+                <td>Estimulación cognitiva</td>
+                <td>Taller creativo</td>
+                <td>10:00 a 11:00</td>
+              </tr>
+              <tr>
+                <th scope="row">Viernes</th>
+                <td>Medio ambiente</td>
+                <td>Paseo por el bosque</td>
+                <td>10:00 a 11:30</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </section>
 
-      <section>
+      <section class="seccion">
         <h2>Cómo participar</h2>
-        <ol>
+        <ol class="lista">
           <li>Consulta las actividades y sus horarios.</li>
           <li>Elige el taller que te interese.</li>
           <li>

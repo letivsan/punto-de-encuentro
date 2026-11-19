@@ -8,23 +8,28 @@
       content="Formulario de participación en los talleres de Punto de Encuentro."
     />
     <title>Participa | Punto de Encuentro</title>
-    <link rel="stylesheet" href="css/estilos.css" />
+    <link rel="stylesheet" href="css/styles.css" />
   </head>
 
   <body>
     <header id="inicio">
-      <a href="index.html">Punto de Encuentro</a>
+      <a class="marca" href="index.html">Punto de Encuentro</a>
 
       <nav aria-label="Navegación principal">
-        <ul>
+        <ul class="menu">
           <li>
-            <a href="index.html">Inicio</a>
+            <a class="menu-enlace" href="index.html">Inicio</a>
           </li>
           <li>
-            <a href="talleres.html">Talleres</a>
+            <a class="menu-enlace" href="talleres.html">Talleres</a>
           </li>
           <li>
-            <a href="participa.html" aria-current="page">Participa</a>
+            <a
+              class="menu-enlace actual"
+              href="participa.html"
+              aria-current="page"
+              >Participa</a
+            >
           </li>
         </ul>
       </nav>
@@ -39,27 +44,42 @@
         </span>
       </p>
 
+      <!-- El envío de demostración abre gracias.html. -->
       <form action="gracias.html" method="get">
-        <fieldset>
+        <fieldset class="bloque">
           <legend>Datos de contacto</legend>
 
           <div class="campo">
-            <label for="nombre">Nombre (obligatorio)</label>
-            <input type="text" id="nombre" name="nombre" required />
+            <label class="etiqueta" for="nombre"> Nombre (obligatorio) </label>
+            <input
+              class="control"
+              type="text"
+              id="nombre"
+              name="nombre"
+              required
+            />
           </div>
 
           <div class="campo">
-            <label for="correo">Correo electrónico (obligatorio)</label>
-            <input type="email" id="correo" name="correo" required />
+            <label class="etiqueta" for="correo">
+              Correo electrónico (obligatorio)
+            </label>
+            <input
+              class="control"
+              type="email"
+              id="correo"
+              name="correo"
+              required
+            />
           </div>
         </fieldset>
 
-        <fieldset>
+        <fieldset class="bloque">
           <legend>Preferencias</legend>
 
           <div class="campo">
-            <label for="taller">Taller (obligatorio)</label>
-            <select id="taller" name="taller" required>
+            <label class="etiqueta" for="taller"> Taller (obligatorio) </label>
+            <select class="control" id="taller" name="taller" required>
               <option value="">Selecciona un taller</option>
               <option value="orientacion">Orientación a la realidad</option>
               <option value="estimulacion">Estimulación cognitiva</option>
@@ -68,14 +88,19 @@
           </div>
 
           <div class="campo">
-            <label for="comentarios">
+            <label class="etiqueta" for="comentarios">
               ¿Qué actividad te interesa especialmente? (opcional)
             </label>
-            <textarea id="comentarios" name="comentarios" rows="4"></textarea>
+            <textarea
+              class="control"
+              id="comentarios"
+              name="comentarios"
+              rows="4"
+            ></textarea>
           </div>
         </fieldset>
 
-        <div class="campo">
+        <div class="aceptacion">
           <input
             type="checkbox"
             id="demostracion"
@@ -88,8 +113,8 @@
           </label>
         </div>
 
-        <button type="submit">Enviar</button>
-        <button type="reset">Borrar datos</button>
+        <button class="boton" type="submit">Enviar</button>
+        <button class="boton" type="reset">Borrar datos</button>
       </form>
     </main>
 
