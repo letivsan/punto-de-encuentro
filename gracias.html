@@ -12,24 +12,25 @@
   </head>
 
   <body>
-    <header id="inicio">
-      <a class="marca" href="index.html">Punto de Encuentro</a>
+    <header class="cabecera" id="inicio">
+      <a class="cabecera__marca" href="index.html">Punto de Encuentro</a>
 
       <nav aria-label="Navegación principal">
         <ul class="menu">
           <li>
-            <a class="menu-enlace" href="index.html">Inicio</a>
+            <a class="menu__enlace" href="index.html">Inicio</a>
           </li>
           <li>
-            <a class="menu-enlace" href="talleres.html">Talleres</a>
+            <a class="menu__enlace" href="talleres.html">Talleres</a>
           </li>
           <li>
-            <a class="menu-enlace" href="participa.html">Participa</a>
+            <a class="menu__enlace" href="participa.html">Participa</a>
           </li>
         </ul>
       </nav>
     </header>
 
+    <!-- El centrado se aplica al mensaje de confirmación y a su enlace. -->
     <main style="text-align: center">
       <h1>Formulario completado</h1>
       <p>Has llegado al final de la demostración.</p>
@@ -40,13 +41,15 @@
       <a class="boton" href="index.html">Volver al inicio</a>
     </main>
 
-    <footer>
+    <footer class="pie">
       <p>Punto de Encuentro</p>
       <p>
         © 2026 Punto de Encuentro. Proyecto académico para la tarea de la UD2 de
         LMSXI.
       </p>
-      <a href="#inicio">Volver arriba</a>
+      <a class="pie__volver-arriba" href="#inicio">
+        Volver arriba <span aria-hidden="true">↑</span>
+      </a>
     </footer>
   </body>
 </html>

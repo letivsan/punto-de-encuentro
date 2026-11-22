@@ -12,24 +12,25 @@
   </head>
 
   <body>
-    <header id="inicio">
-      <a class="marca" href="index.html">Punto de Encuentro</a>
+    <header class="cabecera" id="inicio">
+      <a class="cabecera__marca" href="index.html">Punto de Encuentro</a>
 
       <nav aria-label="Navegación principal">
         <ul class="menu">
           <li>
-            <a class="menu-enlace" href="index.html">Inicio</a>
+            <a class="menu__enlace" href="index.html">Inicio</a>
           </li>
           <li>
             <a
-              class="menu-enlace actual"
+              class="menu__enlace menu__enlace--actual"
               href="talleres.html"
               aria-current="page"
-              >Talleres</a
             >
+              Talleres
+            </a>
           </li>
           <li>
-            <a class="menu-enlace" href="participa.html">Participa</a>
+            <a class="menu__enlace" href="participa.html">Participa</a>
           </li>
         </ul>
       </nav>
@@ -38,14 +39,21 @@
     <main>
       <h1>Talleres y actividades</h1>
       <p>
-        Consulta las actividades de orientación a la realidad, estimulación
-        cognitiva y medio ambiente.
+        Consulta las actividades y los horarios de los tres talleres de Punto de
+        Encuentro.
       </p>
 
-      <section class="seccion" id="calendario">
-        <h2>Calendario semanal</h2>
+      <section class="seccion calendario" id="calendario">
+        <h2 id="titulo-calendario">Calendario semanal</h2>
 
-        <div class="tabla-scroll">
+        <!-- El contenedor recibe el foco para desplazar la tabla con el teclado. -->
+        <div
+          class="calendario__contenedor-tabla"
+          role="region"
+          aria-labelledby="titulo-calendario"
+          tabindex="0"
+        >
+          <!-- scope relaciona cada dato con el encabezado de su fila o columna. -->
           <table>
             <caption>
               Actividades y horarios de ejemplo
@@ -73,7 +81,7 @@
               </tr>
               <tr>
                 <th scope="row">Viernes</th>
-                <td>Medio ambiente</td>
+                <td>Naturaleza y bienestar</td>
                 <td>Paseo por el bosque</td>
                 <td>10:00 a 11:30</td>
               </tr>
@@ -82,7 +90,7 @@
         </div>
       </section>
 
-      <section class="seccion">
+      <section>
         <h2>Cómo participar</h2>
         <ol class="lista">
           <li>Consulta las actividades y sus horarios.</li>
@@ -95,13 +103,15 @@
       </section>
     </main>
 
-    <footer>
+    <footer class="pie">
       <p>Punto de Encuentro</p>
       <p>
         © 2026 Punto de Encuentro. Proyecto académico para la tarea de la UD2 de
         LMSXI.
       </p>
-      <a href="#inicio">Volver arriba</a>
+      <a class="pie__volver-arriba" href="#inicio">
+        Volver arriba <span aria-hidden="true">↑</span>
+      </a>
     </footer>
   </body>
 </html>

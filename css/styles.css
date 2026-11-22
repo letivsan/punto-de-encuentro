@@ -1,3 +1,4 @@
+/* Variables y estilos generales */
 :root {
   --color-g: #97BF0E;
   --color-gd: #365314;
@@ -6,6 +7,7 @@
 
   --font-text: Arial, sans-serif;
   --font-S: 1rem;
+  --font-SM: 1.25rem;
   --font-M: 1.5rem;
   --font-L: 2rem;
 }
@@ -24,34 +26,30 @@ body {
   line-height: 1.5;
 }
 
-header, main, footer {
+.cabecera,
+main,
+.pie {
   max-width: 1100px;
   margin: 0 auto;
   padding: 1rem;
 }
 
-header {
-  border-bottom: 3px solid var(--color-g);
-}
-
-footer {
-  border-top: 1px solid var(--color-grey);
-}
-
 h1 {
-  font-size: var(--font-L);
+  font-size: var(--font-M);
 }
 
 h2 {
-  font-size: var(--font-M);
+  font-size: var(--font-SM);
 }
 
 h3 {
   font-size: var(--font-S);
 }
 
-h1, h2, h3, p, .seccion,
-fieldset, .campo, .lista, .aceptacion {
+h1,
+h2,
+h3,
+p {
   margin-bottom: 1rem;
 }
 
@@ -59,15 +57,61 @@ a {
   color: var(--color-gd);
 }
 
-.marca, .menu-enlace, .boton {
-  text-decoration: none;
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
-.marca {
-  display: inline-block;
+:focus-visible {
+  outline: 2px solid var(--color-gd);
+  outline-offset: 2px;
+}
+
+/* Clases compartidas */
+.seccion,
+.lista {
   margin-bottom: 1rem;
+}
+
+.bloque {
+  padding: 1rem;
+  border: 1px solid var(--color-grey);
+}
+
+.lista {
+  padding-left: 1.5rem;
+}
+
+.boton {
+  display: inline-block;
+  padding: 0.65rem 1rem;
+  border: 1px solid var(--color-gd);
+  background-color: var(--color-gd);
+  color: var(--color-w);
+  font: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.boton:hover {
+  background-color: var(--color-g);
+  color: var(--color-grey);
+}
+
+/* Cabecera, menú y pie */
+.cabecera {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  border-bottom: 3px solid var(--color-g);
+}
+
+.cabecera__marca {
   font-size: var(--font-M);
   font-weight: bold;
+  text-decoration: none;
 }
 
 .menu {
@@ -77,121 +121,185 @@ a {
   list-style: none;
 }
 
-.menu-enlace {
+.menu__enlace {
   display: block;
   padding: 0.5rem;
+  text-decoration: none;
 }
 
-.actual {
+.menu__enlace--actual {
   background-color: var(--color-g);
   color: var(--color-grey);
+  font-weight: bold;
 }
 
-.bloque {
-  padding: 1rem;
-  border: 1px solid var(--color-grey);
-  background-color: var(--color-w);
+.pie {
+  border-top: 1px solid var(--color-grey);
 }
 
-.contenido-principal, .tarjetas {
-  display: flex;
-  flex-direction: column;
+.pie__volver-arriba {
+  display: block;
+  width: fit-content;
+  margin-left: auto;
+}
+
+/* Inicio */
+.presentacion,
+.contenido-principal,
+.talleres {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: 1rem;
 }
 
-.lista {
-  padding-left: 1.5rem;
+.presentacion__imagen {
+  width: 100%;
+  max-width: 600px;
+  justify-self: center;
 }
 
-.control, .boton {
-  font: inherit;
+/* El título ocupa la fila completa también cuando hay tres tarjetas en fila. */
+.talleres__titulo {
+  grid-column: 1 / -1;
+  margin-bottom: 0;
 }
 
-.boton {
-  display: inline-block;
-  padding: 0.65rem 1rem;
-  border: 1px solid var(--color-gd);
-  background-color: var(--color-gd);
-  color: var(--color-w);
-  cursor: pointer;
+/* Las tarjetas reutilizan el borde y el relleno de .bloque. */
+.tarjeta {
+  border-color: #ddd;
+  border-radius: 8px;
 }
 
-.boton:hover {
-  background-color: var(--color-g);
-  color: var(--color-grey);
+.tarjeta__imagen {
+  width: 4rem;
+  margin-bottom: 0.5rem;
 }
 
-.tabla-scroll {
+.tarjeta > p {
+  margin-bottom: 0;
+}
+
+/* Calendario */
+.calendario__contenedor-tabla {
   overflow-x: auto;
 }
 
-table {
+.calendario table {
   width: 100%;
   border-collapse: collapse;
-  background-color: var(--color-w);
 }
 
-caption {
+.calendario caption {
   padding-bottom: 0.5rem;
   text-align: left;
 }
 
-th, td {
+.calendario th,
+.calendario td {
   padding: 0.5rem;
   border: 1px solid var(--color-grey);
   text-align: left;
 }
 
-thead {
+.calendario thead {
   background-color: var(--color-gd);
   color: var(--color-w);
 }
 
-form {
-  max-width: 650px;
-}
-
-legend {
-  font-weight: bold;
-}
-
-.etiqueta {
-  display: block;
-  margin-bottom: 0.35rem;
-}
-
-.control {
-  width: 100%;
-  padding: 0.65rem;
-  border: 1px solid var(--color-grey);
-}
-
-textarea {
-  resize: vertical;
-}
-
-.aceptacion {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.5rem;
-}
-
+/* Formulario */
 .nota {
   color: var(--color-gd);
   font-weight: bold;
 }
 
-img {
+.formulario {
+  max-width: 650px;
+}
+
+.formulario fieldset,
+.formulario__campo,
+.formulario__aceptacion {
+  margin-bottom: 1rem;
+}
+
+.formulario fieldset {
+  min-width: 0;
+}
+
+.formulario legend {
+  font-weight: bold;
+}
+
+.formulario__campo:last-child {
+  margin-bottom: 0;
+}
+
+.formulario__etiqueta {
   display: block;
-  max-width: 100%;
-  height: auto;
+  margin-bottom: 0.35rem;
 }
 
-.imagen-presentacion {
+.formulario__control {
   width: 100%;
-  max-width: 600px;
+  padding: 0.65rem;
+  border: 1px solid var(--color-grey);
+  font: inherit;
 }
 
-.talleres img {
-  width: 64px;
+.formulario textarea {
+  resize: vertical;
+}
+
+.formulario__aceptacion {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.formulario__aceptacion input {
+  margin-top: 0.3rem;
+}
+
+.formulario__acciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* La distribución base se apila en móvil. Se añaden columnas cuando hay espacio. */
+@media (min-width: 768px) {
+  h1 {
+    font-size: var(--font-L);
+  }
+
+  h2 {
+    font-size: var(--font-M);
+  }
+
+  .cabecera {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .talleres {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .presentacion {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: center;
+  }
+
+  .contenido-principal {
+    grid-template-columns: 3fr 1fr;
+    align-items: start;
+  }
+  
+  /* Baja el lateral hasta la altura de las tarjetas. */
+  .contenido-principal > .bloque {
+  margin-top: 3.5rem;
+}
 }

@@ -12,24 +12,25 @@
   </head>
 
   <body>
-    <header id="inicio">
-      <a class="marca" href="index.html">Punto de Encuentro</a>
+    <header class="cabecera" id="inicio">
+      <a class="cabecera__marca" href="index.html">Punto de Encuentro</a>
 
       <nav aria-label="Navegación principal">
         <ul class="menu">
           <li>
-            <a class="menu-enlace" href="index.html">Inicio</a>
+            <a class="menu__enlace" href="index.html">Inicio</a>
           </li>
           <li>
-            <a class="menu-enlace" href="talleres.html">Talleres</a>
+            <a class="menu__enlace" href="talleres.html">Talleres</a>
           </li>
           <li>
             <a
-              class="menu-enlace actual"
+              class="menu__enlace menu__enlace--actual"
               href="participa.html"
               aria-current="page"
-              >Participa</a
             >
+              Participa
+            </a>
           </li>
         </ul>
       </nav>
@@ -37,22 +38,23 @@
 
     <main>
       <h1>Participa en los talleres</h1>
-      <p>
-        Indica qué taller te interesa.
-        <span class="nota">
-          Este formulario es una demostración. Utiliza datos ficticios.
-        </span>
+      <p>Indica qué taller te interesa.</p>
+      <p class="nota">
+        Formulario de demostración. Usa datos ficticios, porque al enviarlo
+        aparecerán en la dirección de la página.
       </p>
 
-      <!-- El envío de demostración abre gracias.html. -->
-      <form action="gracias.html" method="get">
+      <!-- El método GET abre gracias.html con los datos de prueba en la URL. -->
+      <form class="formulario" action="gracias.html" method="get">
         <fieldset class="bloque">
           <legend>Datos de contacto</legend>
 
-          <div class="campo">
-            <label class="etiqueta" for="nombre"> Nombre (obligatorio) </label>
+          <div class="formulario__campo">
+            <label class="formulario__etiqueta" for="nombre">
+              Nombre (obligatorio)
+            </label>
             <input
-              class="control"
+              class="formulario__control"
               type="text"
               id="nombre"
               name="nombre"
@@ -60,12 +62,12 @@
             />
           </div>
 
-          <div class="campo">
-            <label class="etiqueta" for="correo">
+          <div class="formulario__campo">
+            <label class="formulario__etiqueta" for="correo">
               Correo electrónico (obligatorio)
             </label>
             <input
-              class="control"
+              class="formulario__control"
               type="email"
               id="correo"
               name="correo"
@@ -77,22 +79,29 @@
         <fieldset class="bloque">
           <legend>Preferencias</legend>
 
-          <div class="campo">
-            <label class="etiqueta" for="taller"> Taller (obligatorio) </label>
-            <select class="control" id="taller" name="taller" required>
+          <div class="formulario__campo">
+            <label class="formulario__etiqueta" for="taller">
+              Taller (obligatorio)
+            </label>
+            <select
+              class="formulario__control"
+              id="taller"
+              name="taller"
+              required
+            >
               <option value="">Selecciona un taller</option>
               <option value="orientacion">Orientación a la realidad</option>
               <option value="estimulacion">Estimulación cognitiva</option>
-              <option value="medio-ambiente">Medio ambiente</option>
+              <option value="medio-ambiente">Naturaleza y bienestar</option>
             </select>
           </div>
 
-          <div class="campo">
-            <label class="etiqueta" for="comentarios">
+          <div class="formulario__campo">
+            <label class="formulario__etiqueta" for="comentarios">
               ¿Qué actividad te interesa especialmente? (opcional)
             </label>
             <textarea
-              class="control"
+              class="formulario__control"
               id="comentarios"
               name="comentarios"
               rows="4"
@@ -100,7 +109,7 @@
           </div>
         </fieldset>
 
-        <div class="aceptacion">
+        <div class="formulario__aceptacion">
           <input
             type="checkbox"
             id="demostracion"
@@ -109,22 +118,26 @@
             required
           />
           <label for="demostracion">
-            Entiendo que este formulario es una demostración.
+            Entiendo que este formulario es una demostración (obligatorio).
           </label>
         </div>
 
-        <button class="boton" type="submit">Enviar</button>
-        <button class="boton" type="reset">Borrar datos</button>
+        <div class="formulario__acciones">
+          <button class="boton" type="submit">Enviar</button>
+          <button class="boton" type="reset">Borrar datos</button>
+        </div>
       </form>
     </main>
 
-    <footer>
+    <footer class="pie">
       <p>Punto de Encuentro</p>
       <p>
         © 2026 Punto de Encuentro. Proyecto académico para la tarea de la UD2 de
         LMSXI.
       </p>
-      <a href="#inicio">Volver arriba</a>
+      <a class="pie__volver-arriba" href="#inicio">
+        Volver arriba <span aria-hidden="true">↑</span>
+      </a>
     </footer>
   </body>
 </html>

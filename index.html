@@ -9,47 +9,52 @@
     />
     <title>Inicio | Punto de Encuentro</title>
     <link rel="stylesheet" href="css/styles.css" />
-
+    <!-- El fondo de la presentación es un estilo propio de Inicio. -->
     <style>
-      /* Borde de la presentación de Inicio. */
-      .hero {
-        border-top: 4px solid var(--color-g);
+      #presentacion {
+        background-color: #f4f6ef;
       }
     </style>
   </head>
 
   <body>
-    <header id="inicio">
-      <a class="marca" href="index.html">Punto de Encuentro</a>
+    <header class="cabecera" id="inicio">
+      <a class="cabecera__marca" href="index.html">Punto de Encuentro</a>
 
       <nav aria-label="Navegación principal">
         <ul class="menu">
           <li>
-            <a class="menu-enlace actual" href="index.html" aria-current="page"
-              >Inicio</a
+            <a
+              class="menu__enlace menu__enlace--actual"
+              href="index.html"
+              aria-current="page"
             >
+              Inicio
+            </a>
           </li>
           <li>
-            <a class="menu-enlace" href="talleres.html">Talleres</a>
+            <a class="menu__enlace" href="talleres.html">Talleres</a>
           </li>
           <li>
-            <a class="menu-enlace" href="participa.html">Participa</a>
+            <a class="menu__enlace" href="participa.html">Participa</a>
           </li>
         </ul>
       </nav>
     </header>
 
     <main>
-      <section class="bloque hero seccion">
-        <h1>Talleres para aprender y compartir</h1>
-        <p>
-          Actividades para personas adultas con enfermedad mental grave. Un
-          espacio para participar, desarrollar habilidades y disfrutar de
-          actividades en compañía.
-        </p>
-        <a class="boton" href="talleres.html">Ver talleres</a>
+      <section class="bloque presentacion seccion" id="presentacion">
+        <div>
+          <h1>Talleres para aprender, compartir y conectar</h1>
+          <p>
+            Actividades grupales para personas adultas con problemas de salud
+            mental. Un espacio seguro para participar, potenciar habilidades y
+            disfrutar del ocio en compañía.
+          </p>
+          <a class="boton" href="talleres.html">Ver talleres</a>
+        </div>
         <img
-          class="imagen-presentacion"
+          class="presentacion__imagen"
           src="img/presentacion-talleres.webp"
           alt="Personas adultas haciendo una dinámica de lectura"
         />
@@ -57,39 +62,45 @@
 
       <div class="contenido-principal">
         <section class="talleres">
-          <h2>Nuestros talleres</h2>
+          <h2 class="talleres__titulo">Nuestros talleres</h2>
+          <!-- Los iconos llevan alt="" porque el título ya identifica cada taller. -->
+          <article class="bloque tarjeta">
+            <img
+              class="tarjeta__imagen"
+              src="img/orientacion-realidad.webp"
+              alt=""
+            />
+            <h3>Orientación a la realidad</h3>
+            <p>
+              Espacio de diálogo sobre noticias, gestión del día a día y vínculo
+              con el entorno cercano.
+            </p>
+          </article>
 
-          <div class="tarjetas">
-            <article class="bloque tarjeta">
-              <img src="img/orientacion-realidad.webp" alt="" />
-              <h3>Orientación a la realidad</h3>
-              <p>
-                Calendario, noticias y conversaciones sobre el entorno y la vida
-                cotidiana.
-              </p>
-            </article>
+          <article class="bloque tarjeta">
+            <img
+              class="tarjeta__imagen"
+              src="img/estimulacion-cognitiva.webp"
+              alt=""
+            />
+            <h3>Estimulación cognitiva</h3>
+            <p>
+              Dinámicas de lectura, escritura y expresión artística para
+              entrenar la atención, la memoria y la comunicación.
+            </p>
+          </article>
 
-            <article class="bloque tarjeta">
-              <img src="img/estimulacion-cognitiva.webp" alt="" />
-              <h3>Estimulación cognitiva</h3>
-              <p>
-                Propuestas de lectura, prensa y creatividad para trabajar la
-                atención, la memoria y la expresión.
-              </p>
-            </article>
-
-            <article class="bloque tarjeta">
-              <img src="img/medio-ambiente.webp" alt="" />
-              <h3>Medio ambiente</h3>
-              <p>
-                Paseos, baños de bosque y actividad física al aire libre para
-                disfrutar de la naturaleza en grupo.
-              </p>
-            </article>
-          </div>
+          <article class="bloque tarjeta">
+            <img class="tarjeta__imagen" src="img/medio-ambiente.webp" alt="" />
+            <h3>Naturaleza y bienestar</h3>
+            <p>
+              Rutas al aire libre, baños de bosque y movimiento suave para
+              reconectar con el entorno natural en grupo.
+            </p>
+          </article>
         </section>
 
-        <aside class="bloque proximas-actividades">
+        <aside class="bloque">
           <h2>Próximas actividades</h2>
           <ul class="lista">
             <li>Prensa y actualidad.</li>
@@ -101,13 +112,15 @@
       </div>
     </main>
 
-    <footer>
+    <footer class="pie">
       <p>Punto de Encuentro</p>
       <p>
         © 2026 Punto de Encuentro. Proyecto académico para la tarea de la UD2 de
         LMSXI.
       </p>
-      <a href="#inicio">Volver arriba</a>
+      <a class="pie__volver-arriba" href="#inicio">
+        Volver arriba <span aria-hidden="true">↑</span>
+      </a>
     </footer>
   </body>
 </html>
